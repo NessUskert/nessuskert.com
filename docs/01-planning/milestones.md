@@ -1,0 +1,1 @@
+Major checkpoints, like “Infrastructure Complete,” “Homepage Draft,” “Portfolio Added,” “v1 Launch.”

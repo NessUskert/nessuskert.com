@@ -1,0 +1,1 @@
+Reusable design pieces: nav bar, buttons, cards, hero section, footer.

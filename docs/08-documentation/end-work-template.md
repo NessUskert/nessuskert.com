@@ -25,3 +25,5 @@
 
 - [ ] Write what was completed today.
 - [ ] Write what should happen next time.
+- [ ] Write successes
+- [ ] Write failures

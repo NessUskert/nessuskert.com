@@ -1,0 +1,11 @@
+{
+  "name": "project-template",
+  "version": "1.0.0",
+  "description": "Reusable starter template for website projects.",
+  "scripts": {
+    "start": "echo \"Open public/index.html with Live Server\"",
+    "check": "echo \"No checks configured yet\""
+  },
+  "author": "Ness Uskert",
+  "license": "UNLICENSED"
+}

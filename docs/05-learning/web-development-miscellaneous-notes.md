@@ -1,3 +1,5 @@
+Principle: Notetaking docks
+
 Research:
 
 Working in Terminal

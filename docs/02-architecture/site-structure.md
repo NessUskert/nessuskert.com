@@ -1,0 +1,1 @@
+The pages of the site: Home, About, Writing, Projects, Contact, etc.

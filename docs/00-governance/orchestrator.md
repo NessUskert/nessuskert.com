@@ -1,0 +1,1 @@
+Acts like the project manager. It tracks the current phase, priorities, active tasks, blockers, and next recommended actions.

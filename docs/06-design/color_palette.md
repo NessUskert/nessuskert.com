@@ -1,0 +1,1 @@
+Main colors, background colors, accent colors, dark/light mode ideas.

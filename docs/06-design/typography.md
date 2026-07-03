@@ -1,0 +1,1 @@
+Fonts, heading sizes, paragraph styles, line spacing.

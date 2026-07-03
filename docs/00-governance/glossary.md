@@ -1,0 +1,1 @@
+Defines vocabulary you learn: Git, commit, branch, DNS, HTTPS, CSS selector, DOM, etc.

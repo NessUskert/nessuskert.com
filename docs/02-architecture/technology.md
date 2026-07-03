@@ -1,0 +1,1 @@
+Lists the tools being used: HTML, CSS, JavaScript, GitHub Pages, GoDaddy DNS, VS Code.

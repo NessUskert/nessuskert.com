@@ -1,0 +1,1 @@
+Explains what the project is, why it exists, who it is for, and what counts as success.
