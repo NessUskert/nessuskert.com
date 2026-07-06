@@ -1,5 +1,10 @@
 # Start Work Checklist
 
+**Project:**
+**Date:**
+**Session #:**
+**Duration:**
+
 ## 1. Confirm project status
 
 - [ ] Open `nessuskert.com` in VS Code.
@@ -21,3 +26,5 @@
 - [ ] Make changes carefully.
 - [ ] Test in browser.
 - [ ] Commit only when the change is meaningful.
+
+## 4. Outline Today's To-Do List under Task 2's Guidance

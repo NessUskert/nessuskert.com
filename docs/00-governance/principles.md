@@ -60,6 +60,7 @@ Universal Document Header
    - daily-log.md
    - backlog.md
    - session-plan.md
+   and ask ChatGPT to give you a daily list based on the last days log out.
 5. Complete the Session Start Checklist.
 6. Select one primary objective for the work session.
 7. Break the objective into smaller tasks.

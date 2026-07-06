@@ -1,5 +1,10 @@
 # End Work Checklist
 
+**Project:**
+**Date:**
+**Session #:**
+**Duration:**
+
 ## 1. Review changes
 
 - [ ] Save all files.

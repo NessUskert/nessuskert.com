@@ -1,0 +1,121 @@
+:root {
+  --color-primary-50:  #F3F7F2;
+  --color-primary-100: #E6EEE2;
+  --color-primary-200: #D4E2CC;
+  --color-primary-300: #BDD3B1;
+  --color-primary-400: #99BA84;
+  --color-primary-500: #77A361;
+  --color-primary-600: #5D814A;
+  --color-primary-700: #49663A;
+  --color-primary-800: #36502B;
+  --color-primary-900: #24361C;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--color-primary-50);
+  color: var(--color-primary-900);
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 8%;
+  background: var(--color-primary-100);
+  border-bottom: 1px solid var(--color-primary-600);
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: var(--color-primary-900);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-primary-900);
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: var(--color-primary-600);
+}
+
+.home {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 8%;
+}
+
+.hero {
+  max-width: 800px;
+  text-align: center;
+}
+
+.profile-photo {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid var(--color-primary-600);
+  margin-bottom: 32px;
+}
+
+.intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.intro p {
+  max-width: 650px;
+  margin: 0 auto 32px;
+  font-size: 1.1rem;
+}
+
+.button {
+  display: inline-block;
+  background: var(--color-primary-600);
+  color: white;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background: var(--color-primary-700);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nav-links {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .intro h2 {
+    font-size: 2rem;
+  }
+}

@@ -1,5 +1,10 @@
 # End Work Checklist
 
+**Project: Personal Website**
+**Date: 06-27-2026**
+**Session #: 2**
+**Duration: 3 hours**
+
 ## 1. Review Work
 
 - [x] Save all files.
