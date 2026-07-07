@@ -1,5 +1,7 @@
 :root {
-  --color-primary-50:  #F3F7F2;
+
+
+  --color-primary-50: #F3F7F2;
   --color-primary-100: #E6EEE2;
   --color-primary-200: #D4E2CC;
   --color-primary-300: #BDD3B1;
@@ -9,6 +11,30 @@
   --color-primary-700: #49663A;
   --color-primary-800: #36502B;
   --color-primary-900: #24361C;
+
+  /*fonts
+
+  --font-heading: "Cinzel", sans-serif;
+  --font-body: "Lora", serif;
+
+  /* Golden Ratio Typography Scale */
+  --font-size-caption: 0.875rem;
+  --font-size-body: 1rem;
+  --font-size-h6: 1.125rem;
+  --font-size-h5: 1.25rem;
+  --font-size-h4: 1.618rem;
+  --font-size-h3: 2.618rem;
+  --font-size-h2: 4.236rem;
+  --font-size-h1: 6.854rem;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 800;
+
+  --line-height-body: 1.6;
+  --line-height-heading: 1.1;
+  --letter-spacing-standard: 0;
 }
 
 * {
@@ -18,10 +44,50 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-standard);
   background: var(--color-primary-50);
   color: var(--color-primary-900);
-  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-standard);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
 }
 
 .navbar {
@@ -79,6 +145,7 @@ body {
 .intro h2 {
   font-size: 2.5rem;
   margin-bottom: 16px;
+  font-weight: 525;
 }
 
 .intro p {
@@ -118,4 +185,24 @@ body {
   .intro h2 {
     font-size: 2rem;
   }
+}
+
+.caption,
+small {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-regular);
+}
+
+@font-face {
+    font-family: "Cinzel";
+    src: url("../../public/assets/fonts/Cinzel-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lora";
+    src: url("../../public/assets/fonts/Lora-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
 }

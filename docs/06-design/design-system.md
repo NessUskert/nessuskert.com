@@ -13,11 +13,11 @@ The master design guide: colors, typography, spacing, buttons, cards, sections.
 
 ### Color System
 
-- [ ] Choose a primary color.
-- [ ] Choose secondary and accent colors.
-- [ ] Select neutral colors (backgrounds, borders, text).
-- [ ] Define light and dark shades for each color.
-- [ ] Test color accessibility and contrast.
+- [X] Choose a primary color.
+- [X] Choose secondary and accent colors.
+- [X] Select neutral colors (backgrounds, borders, text).
+- [X] Define light and dark shades for each color.
+- [X] Test color accessibility and contrast.
 
 ---
 
