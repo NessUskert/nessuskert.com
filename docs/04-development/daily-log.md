@@ -201,3 +201,126 @@ git commit -m "Create initial homepage prototype and establish design system"
 **Confidence:** 8/10
 
 **Overall:** 9/10
+
+# Daily Log
+
+**Project:** nessuskert.com
+**Date:** July 9, 2026
+**Session #:** 3
+**Duration:** ~4 hours
+
+---
+
+## Session Goal
+
+Finalize the website's design system, improve the homepage, begin building additional pages, and establish a scalable project structure for future development.
+
+---
+
+## Planned Tasks
+
+- [x] Finalize the website's design language and component styling.
+- [x] Continue building the homepage and navigation.
+- [x] Create the foundation for additional website pages.
+
+---
+
+## Completed
+
+- [x] Split the CSS into a modular structure (`variables`, `fonts`, `typography`, `navbar`, `dropdown`, `home`, `buttons`, `footer`, and `responsive`).
+- [x] Added a reusable footer and improved the homepage layout.
+- [x] Built a multi-level navigation bar with dropdown menus.
+- [x] Added a hero banner to page layouts and learned how to position text over images.
+- [x] Added semantic HTML structure using `<header>`, `<main>`, and `<footer>`.
+- [x] Added a favicon and learned how browser caching affects GitHub Pages.
+- [x] Began creating additional pages (About, Writing, School, Business, Professional Work, Contact, etc.).
+- [x] Organized project assets into dedicated folders for images, icons, videos, links, and writing.
+- [x] Continued refining the site's typography, spacing, and visual hierarchy.
+- [x] Began developing a personal logo for branding across the website and GitHub.
+
+---
+
+## Challenges
+
+- CSS became difficult to manage as the project grew, leading to a refactor into multiple stylesheet files.
+- GitHub Pages appeared broken on desktop due to cached CSS while working correctly in Incognito mode.
+- Relative file paths became confusing when linking between nested HTML pages and assets.
+- The navigation bar became crowded because of long menu titles and required layout adjustments.
+- Learned that dropdown menus can be hidden behind page elements due to `z-index` stacking.
+
+---
+
+## Decisions Made
+
+- Split the CSS into focused files instead of maintaining one large stylesheet.
+- Adopted semantic HTML (`header`, `main`, `footer`) for better organization and accessibility.
+- Continued using Cinzel for headings/navigation and Lora for body text.
+- Organized assets into dedicated folders to make the project easier to maintain.
+- Designed a custom logo and favicon to establish consistent personal branding.
+- Chose to use dropdown menus to keep the navigation scalable as more pages are added.
+
+---
+
+## Lessons Learned
+
+- How CSS `@import` works and how to organize multiple stylesheets.
+- The difference between global styles, component styles, and page-specific styles.
+- How Flexbox positions elements and when to use `justify-content`, `margin-left: auto`, and `gap`.
+- How relative file paths work between nested folders.
+- How favicons are added and why browsers aggressively cache them.
+- How to overlay text on images using positioning.
+- How `z-index` controls which elements appear above others.
+- Why semantic HTML improves maintainability and accessibility.
+- How browser caching can affect deployed websites independently of the actual code.
+
+---
+
+## Next Session
+
+Priority tasks:
+
+1. Refine the navigation layout and spacing.
+2. Complete the About page.
+3. Build reusable card components.
+4. Begin the Projects/Professional Work page.
+5. Improve responsive behavior across all pages.
+6. Continue refining the site's visual design and branding.
+7. Add animations and hover interactions where appropriate.
+
+---
+
+## Files Modified
+
+- `index.html`
+- `src/pages/*.html`
+- `src/css/style.css`
+- `src/css/variables.css`
+- `src/css/fonts.css`
+- `src/css/base.css`
+- `src/css/typography.css`
+- `src/css/navbar.css`
+- `src/css/dropdown.css`
+- `src/css/home.css`
+- `src/css/buttons.css`
+- `src/css/footer.css`
+- `src/css/responsive.css`
+- `public/assets/icons/*`
+- `public/assets/images/*`
+
+---
+
+## Commit
+
+```bash
+git commit -m "Refactor CSS architecture, expand site structure, and improve navigation"
+```
+
+---
+
+## Session Rating
+
+**Productivity:** 9.5/10
+
+**Confidence:** 8.5/10
+
+**Overall:** 9/10
