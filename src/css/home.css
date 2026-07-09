@@ -6,6 +6,10 @@
   padding: 64px 8%;
 }
 
+.favicon {
+    border-radius: 10%;
+}
+
 .hero {
   max-width: 800px;
   text-align: center;
@@ -39,6 +43,7 @@
     height: 450px;
 
     overflow: hidden;
+    z-index: 1;
 }
 
 .hero-banner img {
