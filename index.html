@@ -8,19 +8,53 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../public/assets/images/pwlogo.png">
 </head>
 <body>
-
   <nav class="navbar">
     <h1 class="logo">Ness Uskert</h1>
 
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Writing</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="src/pages/about.html">About</a></li>
+      
+      <li class="dropdown">
+        <a href="#">My Personal Interests</a>
+
+        <ul class="dropdown-menu">
+          <li><a href="src/pages/mywriting.html">My Writing</a></li>
+          <li><a href="src/pages/mymusic.html">My Music</a></li>
+          <li><a href="src/pages/myathletics.html">My Athletics</a></li>
+          <li><a href="src/pages/myotherpersonalinterests.html">My Other Personal Interests</a></li>
+        </ul>
+      </li>
+
+      
+      <li><a href="src/pages/myschoolpursuits.html">My School Pursuits</a></li>
+
+      <li class="dropdown">
+        <a href="#">My Personal Business</a>
+
+        <ul class="dropdown-menu">
+          <li><a href="src/pages/myachievements.html">My Achievements</a></li>
+        <li><a href="src/pages/mygoals.html">My Goals</a></li>
+        <li><a href="src/pages/myfailures.html">My Failures</a></li>
+        </ul>
+      </li>
+      
+      <li><a href="src/pages/professionalwork.html">Professional Work</a></li>
+      <li><a href="src/pages/contact.html">Contact</a></li>
     </ul>
   </nav>
+
+  <section class="hero-banner">
+
+    <div class="hero-text">
+        <h1>Ness Uskert</h1>
+        <p>Academic. Creative. Critical. Kind.</p>
+    </div>
+
+  </section> 
 
   <main class="home">
     <section class="hero">
@@ -35,12 +69,29 @@
           ideas, projects, and experiments as I learn how to build things on the web.
         </p>
 
+        <h2>Socials</h3>
         <a href="https://www.youtube.com/@NessUskert" target="_blank" class="button">
           Visit My YouTube
+        </a>
+        <a href="https://www.instagram.com/nessuskert/" target="_blank" class="button">
+          Visit My Instragram
+        </a>
+        <a href="https://discord.com/users/@Happiness" target="_blank" class="button">
+          Visit My Discord
         </a>
       </div>
     </section>
   </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Ness Uskert. All rights reserved.</p>
+
+    <div class="footer-links">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Email</a>
+    </div>
+  </footer>
 
 </body>
 </html>

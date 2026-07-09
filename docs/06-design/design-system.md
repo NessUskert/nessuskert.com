@@ -34,12 +34,12 @@ The master design guide: colors, typography, spacing, buttons, cards, sections.
 
 ### Spacing & Layout
 
-- [ ] Choose a spacing scale (e.g., 4px, 8px system).
-- [ ] Define page margins.
-- [ ] Define section spacing.
-- [ ] Define content width.
-- [ ] Define grid or layout system.
-- [ ] Decide on border-radius standards.
+- [X] Choose a spacing scale (e.g., 4px, 8px system).
+- [X] Define page margins.
+- [X] Define section spacing.
+- [X] Define content width.
+- [X] Define grid or layout system.
+- [X] Decide on border-radius standards.
 
 ---
 

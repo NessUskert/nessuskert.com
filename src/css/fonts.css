@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Cinzel";
+    src: url("../../public/assets/fonts/Cinzel-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lora";
+    src: url("../../public/assets/fonts/Lora-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}

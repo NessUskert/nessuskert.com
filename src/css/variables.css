@@ -1,0 +1,33 @@
+:root {
+  --color-primary-50: #F3F7F2;
+  --color-primary-100: #E6EEE2;
+  --color-primary-200: #D4E2CC;
+  --color-primary-300: #BDD3B1;
+  --color-primary-400: #99BA84;
+  --color-primary-500: #77A361;
+  --color-primary-600: #5D814A;
+  --color-primary-700: #49663A;
+  --color-primary-800: #36502B;
+  --color-primary-900: #24361C;
+
+  --font-heading: "Cinzel", sans-serif;
+  --font-body: "Lora", serif;
+
+  --font-size-caption: 0.875rem;
+  --font-size-body: 1rem;
+  --font-size-h6: 1.125rem;
+  --font-size-h5: 1.25rem;
+  --font-size-h4: 1.618rem;
+  --font-size-h3: 2.618rem;
+  --font-size-h2: 4.236rem;
+  --font-size-h1: 6.854rem;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 800;
+
+  --line-height-body: 1.6;
+  --line-height-heading: 1.1;
+  --letter-spacing-standard: 0;
+}

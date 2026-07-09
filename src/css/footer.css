@@ -1,0 +1,31 @@
+.footer {
+    margin-top: 80px;
+    padding: 32px 8%;
+
+    border-top: 1px solid var(--color-primary-700);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    font-size: var(--font-size-caption);
+
+    background: var(--color-primary-900);
+    color: var(--color-primary-700);
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-links a:hover {
+    color: var(--color-primary-300);
+}

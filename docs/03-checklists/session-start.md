@@ -81,17 +81,17 @@ Begin building the actual website by creating the visual foundation and first ve
 
 ### Tasks
 
-- [ ] Gather visual inspiration for the site's aesthetic.
-- [ ] Decide on the overall design direction.
-- [ ] Choose the website color palette.
-- [ ] Select typography and font hierarchy.
-- [ ] Define spacing, layout, and design rules.
-- [ ] Sketch the homepage layout.
-- [ ] Build the homepage HTML structure.
-- [ ] Begin styling with CSS.
-- [ ] Add the navigation bar.
+- [X] Gather visual inspiration for the site's aesthetic.
+- [X] Decide on the overall design direction.
+- [X] Choose the website color palette.
+- [X] Select typography and font hierarchy.
+- [X] Define spacing, layout, and design rules.
+- [X] Sketch the homepage layout.
+- [X] Build the homepage HTML structure.
+- [X] Begin styling with CSS.
+- [X] Add the navigation bar.
 - [ ] Test responsiveness across different screen sizes.
-- [ ] Verify the homepage works correctly in the browser.
+- [X] Verify the homepage works correctly in the browser.
 
 ### Files Likely to Change
 
@@ -111,3 +111,74 @@ By the end of today's session:
 - [ ] The navigation bar is present.
 - [ ] The homepage resembles the intended design, even if incomplete.
 - [ ] All meaningful progress has been committed and pushed to GitHub.
+
+# Start Work Checklist
+
+**Project:** nessuskert.com
+**Date:** July 9, 2026
+**Session #:** 3
+**Duration:** 2–4 hours (goal)
+
+## 1. Confirm project status
+
+- [ ] Open `nessuskert.com` in VS Code.
+- [ ] Run `git status`.
+- [ ] Pull latest changes with `git pull`.
+- [ ] Open the live site and confirm it loads.
+- [ ] Review `docs/progress/previous-progress.md`.
+
+## 2. Choose today's task
+
+- [x] Define one main goal for this session.
+
+  **Main Goal:**
+  Finalize the website's visual design system and begin building the homepage using reusable components.
+
+- [x] Break it into small steps.
+
+  1. Finalize colors, typography, spacing, and component styles.
+  2. Design the layout for the homepage.
+  3. Build the navigation/header.
+  4. Build the hero section.
+  5. Create reusable button and card components.
+  6. Test responsiveness as each section is completed.
+
+- [x] Confirm which files will likely change.
+
+  - `src/app/page.tsx`
+  - `src/components/*`
+  - `src/styles/globals.css`
+  - `tailwind.config.ts`
+  - `docs/design/design-system.md`
+  - `docs/progress/daily-log.md`
+
+- [x] Decide what a successful stopping point looks like.
+
+  **Success Criteria:**
+  - Design system is finalized.
+  - Homepage layout is implemented.
+  - Header and hero are complete.
+  - Buttons and cards are reusable.
+  - Everything displays correctly in the browser.
+  - Progress is documented.
+
+## 3. Begin work
+
+- [ ] Start Live Server if needed.
+- [ ] Make changes carefully.
+- [ ] Test in browser.
+- [ ] Commit only when the change is meaningful.
+
+## 4. Outline Today's To-Do List under Task 2's Guidance
+
+- [ ] Finalize design system documentation.
+- [ ] Implement color palette and typography.
+- [ ] Create reusable button components.
+- [ ] Create reusable card components.
+- [ ] Build the homepage navigation.
+- [ ] Build the hero section.
+- [ ] Test desktop responsiveness.
+- [ ] Test tablet responsiveness.
+- [ ] Test mobile responsiveness.
+- [ ] Update project documentation.
+- [ ] Commit changes to Git.
