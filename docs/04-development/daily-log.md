@@ -324,3 +324,90 @@ git commit -m "Refactor CSS architecture, expand site structure, and improve nav
 **Confidence:** 8.5/10
 
 **Overall:** 9/10
+
+# Daily Log
+
+**Project:** nessuskert.com Personal Website  
+**Date:** July 13, 2026  
+**Session #:** 4  
+**Duration:** ~3–4 hours (estimate)
+
+---
+
+## Session Goal
+
+Continue building the website by creating a functional contact page, improving navigation, learning how relative file paths work, and planning for search engine optimization (SEO).
+
+---
+
+## Planned Tasks
+
+- [x] Design and build the Contact page
+- [x] Learn how to implement a contact form
+- [x] Improve navigation and understand file paths
+
+---
+
+## Completed
+
+- [x] Researched SEO best practices for a personal portfolio website.
+- [x] Planned the structure and content of the Contact page.
+- [x] Built the HTML structure for a contact form.
+- [x] Styled the contact form using reusable CSS components.
+- [x] Learned how Formspree works with GitHub Pages for receiving form submissions.
+- [x] Learned the difference between `mailto:` links and contact forms.
+- [x] Investigated why the contact page styling was not appearing correctly on GitHub Pages.
+- [x] Reviewed project folder structure and relative file paths (`./`, `../`, `../../`).
+- [x] Corrected navigation paths for the logo and discussed simplifying page links.
+
+---
+
+## Challenges
+
+The contact page displayed with default browser styling after deploying to GitHub Pages, indicating that the CSS was likely not loading correctly. Debugging focused on stylesheet paths, folder structure, and understanding how relative links work between HTML pages, CSS files, and assets.
+
+---
+
+## Decisions Made
+
+- Use **Formspree** for handling contact form submissions instead of building a backend, since the site is hosted on GitHub Pages.
+- Keep a clickable email address available in addition to the contact form so visitors have multiple ways to reach out.
+- Continue using reusable CSS components and maintain the modular stylesheet structure.
+- Standardize navigation by using simpler relative paths between pages whenever possible.
+
+---
+
+## Lessons Learned
+
+- Search engines rely on semantic HTML, page titles, meta descriptions, and quality content for SEO.
+- GitHub Pages cannot process HTML forms by itself; a third-party service like Formspree is required.
+- Relative paths are always calculated from the location of the current file, making folder structure essential to understand.
+- `./` refers to the current directory, `../` moves up one directory, and each additional `../` moves up another level.
+- When CSS appears to "disappear" on GitHub Pages, the first thing to verify is that the stylesheet path is correct and that all files have been committed and pushed.
+
+---
+
+## Next Session
+
+- Verify and fix the stylesheet loading issue on the Contact page.
+- Finish integrating Formspree and test that messages are delivered successfully.
+- Continue polishing the navigation bar and dropdown menus.
+- Begin improving responsiveness and mobile layout for the Contact page.
+- Continue implementing SEO improvements across the site (page titles, meta descriptions, sitemap planning).
+
+---
+
+## Files Modified
+
+- `src/pages/contact.html`
+- Contact page CSS (or corresponding stylesheet)
+- Navbar/navigation HTML
+- Asset/image references
+- Documentation
+
+---
+
+## Commit
+
+```bash
+git commit -m "Add contact page and improve navigation structure"
