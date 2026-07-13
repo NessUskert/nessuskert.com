@@ -1,0 +1,94 @@
+/* ==========================
+   About Intro
+   ========================== */
+
+.about-intro {
+    max-width: 900px;
+    margin: 5rem auto 3rem;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.about-intro h2 {
+    margin-bottom: 1.5rem;
+}
+
+.about-intro p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+/* Scrolling image banner */
+
+.top-images {
+    width: 100%;
+    overflow: hidden;
+    padding: 1rem 0;
+}
+
+.image-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 16s linear infinite;
+}
+
+.image-group {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    /* Keeps the gap consistent between the two groups */
+    padding-right: 2rem;
+}
+
+.image-group img {
+    width: 120px;
+    height: auto;
+    display: block;
+    flex-shrink: 0;
+    border-radius: 10%;
+    border: 2px solid var(--color-primary-600);
+    backface-visibility: hidden;
+}
+
+/*
+.image-track:hover {
+    animation-play-state: paused;
+} */
+
+@keyframes scroll-left {
+    from {
+        transform: translate3d(0,0,0);
+    }
+
+    to {
+        transform: translate3d(calc(-50% - 1rem), 0, 0);
+    }
+}
+
+/* ==========================
+   Featured Poem
+   ========================== */
+
+.featured-poem {
+    max-width: 700px;
+    margin: 2rem auto 5rem;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.featured-poem h4 {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.poem {
+    font-style: italic;
+    font-size: 0.9rem;      /* Smaller text */
+    line-height: 1.8;
+    color: var(--color-primary-800);
+}
+
+.poem p {
+    margin-bottom: 2rem;
+}
