@@ -1,0 +1,963 @@
+/* =========================================================
+   MY WRITING PAGE
+   File: writing.css
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE VARIABLES
+   These fall back to your forest color palette.
+   ========================================================= */
+
+:root {
+  --writing-background: var(--color-primary-50, #f3f7f2);
+  --writing-surface: #ffffff;
+
+  --writing-green-100: var(--color-primary-100, #e6eee2);
+  --writing-green-200: var(--color-primary-200, #d4e2cc);
+  --writing-green-300: var(--color-primary-300, #bdd3b1);
+  --writing-green-500: var(--color-primary-500, #77a361);
+  --writing-green-600: var(--color-primary-600, #5d814a);
+  --writing-green-700: var(--color-primary-700, #49663a);
+  --writing-green-800: var(--color-primary-800, #36502b);
+  --writing-green-900: var(--color-primary-900, #24361c);
+
+  --writing-text: #273022;
+  --writing-text-light: #5f6959;
+  --writing-border: #d4e2cc;
+
+  --writing-heading-font: "Cinzel", Georgia, serif;
+  --writing-body-font: "Lora", Georgia, serif;
+
+  --writing-page-width: 1200px;
+  --writing-reading-width: 760px;
+
+  --writing-radius-small: 0.5rem;
+  --writing-radius-medium: 1rem;
+  --writing-radius-large: 1.5rem;
+
+  --writing-shadow-small:
+    0 0.25rem 0.75rem rgba(36, 54, 28, 0.08);
+
+  --writing-shadow-medium:
+    0 0.75rem 2rem rgba(36, 54, 28, 0.12);
+
+  --writing-transition: 180ms ease;
+}
+
+
+/* =========================================================
+   BASIC PAGE STYLES
+   ========================================================= */
+
+.writing-page {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--writing-background);
+  color: var(--writing-text);
+  font-family: var(--writing-body-font);
+}
+
+.writing-page *,
+.writing-page *::before,
+.writing-page *::after {
+  box-sizing: border-box;
+}
+
+.writing-page img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.writing-page a {
+  color: inherit;
+}
+
+.writing-page section {
+  width: min(100% - 2rem, var(--writing-page-width));
+  margin-inline: auto;
+  padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+
+/* =========================================================
+   REUSABLE SECTION HEADINGS
+   ========================================================= */
+
+.section-heading {
+  max-width: 48rem;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.section-heading__eyebrow,
+.writing-hero__eyebrow,
+.writing-philosophy__eyebrow,
+.writing-contact__eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--writing-green-700);
+  font-family: Arial, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.section-heading__title,
+.writing-hero__title,
+.writing-philosophy__title,
+.writing-contact__title {
+  margin: 0;
+  color: var(--writing-green-900);
+  font-family: var(--writing-heading-font);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.section-heading__title {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+}
+
+.section-heading__description {
+  max-width: 42rem;
+  margin: 1rem 0 0;
+  color: var(--writing-text-light);
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   DECORATIVE SECTION DIVIDERS
+   ========================================================= */
+
+.section-divider {
+  width: min(100% - 2rem, var(--writing-page-width));
+  height: 1px;
+  margin-inline: auto;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--writing-green-300),
+    transparent
+  );
+}
+
+
+/* =========================================================
+   WRITING HERO
+   ========================================================= */
+
+.writing-page .writing-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.8fr);
+  align-items: center;
+  gap: clamp(2.5rem, 7vw, 6rem);
+  min-height: 75vh;
+}
+
+.writing-hero__text {
+  max-width: 42rem;
+}
+
+.writing-hero__title {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+}
+
+.writing-hero__introduction {
+  max-width: 40rem;
+  margin: 1.5rem 0 0;
+  color: var(--writing-text-light);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.85;
+}
+
+.writing-hero__image-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 28rem;
+  border-radius: var(--writing-radius-large);
+  background-color: var(--writing-green-200);
+  box-shadow: var(--writing-shadow-medium);
+}
+
+.writing-hero__image-container::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(36, 54, 28, 0.24),
+    transparent 55%
+  );
+  content: "";
+  pointer-events: none;
+}
+
+.writing-hero__image {
+  height: 100%;
+  min-height: 28rem;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.writing-hero__image-container:hover .writing-hero__image {
+  transform: scale(1.025);
+}
+
+
+/* =========================================================
+   FEATURED WRITING
+   ========================================================= */
+
+.featured-writing__card {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.75fr) minmax(0, 1.25fr);
+  overflow: hidden;
+  border: 1px solid var(--writing-border);
+  border-radius: var(--writing-radius-large);
+  background-color: var(--writing-surface);
+  box-shadow: var(--writing-shadow-medium);
+}
+
+.featured-writing__image-container {
+  min-height: 34rem;
+  background-color: var(--writing-green-200);
+}
+
+.featured-writing__image {
+  height: 100%;
+  min-height: 34rem;
+  object-fit: cover;
+}
+
+.featured-writing__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2rem, 6vw, 5rem);
+}
+
+.featured-writing__type,
+.writing-card__type,
+.poetry-card__type {
+  margin: 0 0 0.75rem;
+  color: var(--writing-green-700);
+  font-family: Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.featured-writing__title {
+  margin: 0;
+  color: var(--writing-green-900);
+  font-family: var(--writing-heading-font);
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.featured-writing__description {
+  max-width: 38rem;
+  margin: 1.5rem 0 0;
+  color: var(--writing-text-light);
+  font-size: 1.08rem;
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   WRITING TAGS
+   ========================================================= */
+
+.writing-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 1.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.writing-tags__item {
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--writing-green-300);
+  border-radius: 999px;
+  background-color: var(--writing-green-100);
+  color: var(--writing-green-800);
+  font-family: Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.featured-writing__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.writing-page .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.8rem 1.35rem;
+  border: 2px solid transparent;
+  border-radius: var(--writing-radius-small);
+  font-family: Arial, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background-color var(--writing-transition),
+    border-color var(--writing-transition),
+    color var(--writing-transition),
+    transform var(--writing-transition),
+    box-shadow var(--writing-transition);
+}
+
+.writing-page .button:hover {
+  transform: translateY(-2px);
+}
+
+.writing-page .button:focus-visible,
+.writing-page a:focus-visible {
+  outline: 3px solid var(--writing-green-300);
+  outline-offset: 4px;
+}
+
+.writing-page .button--primary {
+  border-color: var(--writing-green-700);
+  background-color: var(--writing-green-700);
+  color: #ffffff;
+  box-shadow: var(--writing-shadow-small);
+}
+
+.writing-page .button--primary:hover {
+  border-color: var(--writing-green-900);
+  background-color: var(--writing-green-900);
+}
+
+.writing-page .button--outline {
+  border-color: var(--writing-green-700);
+  background-color: transparent;
+  color: var(--writing-green-800);
+}
+
+.writing-page .button--outline:hover {
+  background-color: var(--writing-green-100);
+}
+
+
+/* =========================================================
+   CATEGORY GRID
+   ========================================================= */
+
+.writing-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.writing-category-card {
+  display: grid;
+  grid-template-columns: 10rem minmax(0, 1fr);
+  overflow: hidden;
+  min-height: 16rem;
+  border: 1px solid var(--writing-border);
+  border-radius: var(--writing-radius-medium);
+  background-color: var(--writing-surface);
+  box-shadow: var(--writing-shadow-small);
+  transition:
+    transform var(--writing-transition),
+    box-shadow var(--writing-transition),
+    border-color var(--writing-transition);
+}
+
+.writing-category-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--writing-green-300);
+  box-shadow: var(--writing-shadow-medium);
+}
+
+.writing-category-card__image-container {
+  height: 100%;
+  min-height: 16rem;
+  background-color: var(--writing-green-200);
+}
+
+.writing-category-card__image {
+  height: 100%;
+  min-height: 16rem;
+  object-fit: cover;
+}
+
+.writing-category-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.writing-category-card__title {
+  margin: 0;
+  color: var(--writing-green-900);
+  font-family: var(--writing-heading-font);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.writing-category-card__description {
+  margin: 1rem 0 1.5rem;
+  color: var(--writing-text-light);
+  line-height: 1.75;
+}
+
+.writing-category-card__link,
+.writing-card__link,
+.poetry-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: auto;
+  color: var(--writing-green-700);
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3rem;
+}
+
+.writing-category-card__link::after,
+.writing-card__link::after,
+.poetry-card__link::after {
+  content: "→";
+  transition: transform var(--writing-transition);
+}
+
+.writing-category-card__link:hover::after,
+.writing-card__link:hover::after,
+.poetry-card__link:hover::after {
+  transform: translateX(0.25rem);
+}
+
+
+/* =========================================================
+   GENERAL WRITING CARD GRID
+   ========================================================= */
+
+.writing-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.writing-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+  border: 1px solid var(--writing-border);
+  border-radius: var(--writing-radius-medium);
+  background-color: var(--writing-surface);
+  box-shadow: var(--writing-shadow-small);
+  transition:
+    transform var(--writing-transition),
+    box-shadow var(--writing-transition);
+}
+
+.writing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--writing-shadow-medium);
+}
+
+.writing-card__image-link {
+  display: block;
+  overflow: hidden;
+  background-color: var(--writing-green-200);
+}
+
+.writing-card__image {
+  height: clamp(18rem, 35vw, 28rem);
+  object-fit: cover;
+  transition: transform 400ms ease;
+}
+
+.writing-card:hover .writing-card__image {
+  transform: scale(1.03);
+}
+
+.writing-card__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.writing-card__title {
+  margin: 0;
+  color: var(--writing-green-900);
+  font-family: var(--writing-heading-font);
+  font-size: clamp(1.65rem, 4vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.writing-card__title a {
+  text-decoration: none;
+}
+
+.writing-card__title a:hover {
+  color: var(--writing-green-600);
+}
+
+.writing-card__description {
+  margin: 1rem 0 1.75rem;
+  color: var(--writing-text-light);
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   PLACEHOLDER CARDS
+   ========================================================= */
+
+.writing-card--placeholder,
+.poetry-card--placeholder {
+  border-style: dashed;
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+.writing-card__placeholder-image,
+.image-placeholder {
+  display: grid;
+  min-height: 20rem;
+  place-items: center;
+  padding: 2rem;
+  background:
+    linear-gradient(
+      135deg,
+      var(--writing-green-100),
+      var(--writing-green-200)
+    );
+  color: var(--writing-green-700);
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   POETRY CARDS
+   ========================================================= */
+
+.poetry-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.poetry-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 19rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid var(--writing-border);
+  border-radius: var(--writing-radius-medium);
+  background-color: var(--writing-surface);
+  box-shadow: var(--writing-shadow-small);
+  transition:
+    transform var(--writing-transition),
+    box-shadow var(--writing-transition);
+}
+
+.poetry-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--writing-shadow-medium);
+}
+
+.poetry-card__title {
+  margin: 0;
+  color: var(--writing-green-900);
+  font-family: var(--writing-heading-font);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.poetry-card__excerpt {
+  margin: 1.25rem 0 2rem;
+  color: var(--writing-text-light);
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   REFLECTION LIST
+   ========================================================= */
+
+.reflection-list {
+  border-top: 1px solid var(--writing-border);
+}
+
+.reflection-preview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 2rem;
+  padding-block: 2rem;
+  border-bottom: 1px solid var(--writing-border);
+  transition: padding var(--writing-transition);
+}
+
+.reflection-preview:hover {
+  padding-inline: 1rem;
+}
+
+.reflection-preview__date {
+  margin: 0 0 0.5rem;
+  color: var(--writing-green-700);
+  font-family: Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.reflection-preview__title {
+  margin: 0;
+  color: var(--writing-green-900);
+  font-family: var(--writing-heading-font);
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  font-weight: 500;
+}
+
+.reflection-preview__description {
+  max-width: 45rem;
+  margin: 0.75rem 0 0;
+  color: var(--writing-text-light);
+  line-height: 1.75;
+}
+
+.reflection-preview__link {
+  color: var(--writing-green-700);
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   THEME LINKS
+   ========================================================= */
+
+.theme-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.theme-list__item {
+  padding: 0.75rem 1.15rem;
+  border: 1px solid var(--writing-green-300);
+  border-radius: 999px;
+  background-color: var(--writing-surface);
+  color: var(--writing-green-800);
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: var(--writing-shadow-small);
+  transition:
+    background-color var(--writing-transition),
+    border-color var(--writing-transition),
+    color var(--writing-transition),
+    transform var(--writing-transition);
+}
+
+.theme-list__item:hover {
+  transform: translateY(-2px);
+  border-color: var(--writing-green-700);
+  background-color: var(--writing-green-700);
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   WRITING PHILOSOPHY
+   ========================================================= */
+
+.writing-philosophy {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: clamp(2.5rem, 7vw, 6rem);
+}
+
+.writing-philosophy__image-container {
+  overflow: hidden;
+  min-height: 30rem;
+  border-radius: var(--writing-radius-large);
+  background-color: var(--writing-green-200);
+  box-shadow: var(--writing-shadow-medium);
+}
+
+.writing-philosophy__image {
+  height: 100%;
+  min-height: 30rem;
+  object-fit: cover;
+}
+
+.writing-philosophy__content {
+  max-width: 42rem;
+}
+
+.writing-philosophy__title {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+.writing-philosophy__text {
+  margin: 1.35rem 0 0;
+  color: var(--writing-text-light);
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   CONTACT SECTION
+   ========================================================= */
+
+.writing-page .writing-contact {
+  width: min(100% - 2rem, var(--writing-page-width));
+  margin-bottom: clamp(4rem, 8vw, 7rem);
+  padding: clamp(3rem, 8vw, 6rem);
+  border-radius: var(--writing-radius-large);
+  background-color: var(--writing-green-900);
+  color: #ffffff;
+  text-align: center;
+  box-shadow: var(--writing-shadow-medium);
+}
+
+.writing-contact__content {
+  max-width: 44rem;
+  margin-inline: auto;
+}
+
+.writing-contact__eyebrow {
+  color: var(--writing-green-300);
+}
+
+.writing-contact__title {
+  color: #ffffff;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+}
+
+.writing-contact__description {
+  margin: 1.25rem auto 2rem;
+  color: var(--writing-green-100);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.writing-contact .button--primary {
+  border-color: #ffffff;
+  background-color: #ffffff;
+  color: var(--writing-green-900);
+}
+
+.writing-contact .button--primary:hover {
+  border-color: var(--writing-green-200);
+  background-color: var(--writing-green-200);
+}
+
+
+/* =========================================================
+   TABLET RESPONSIVENESS
+   ========================================================= */
+
+@media (max-width: 950px) {
+  .writing-page .writing-hero,
+  .writing-philosophy {
+    grid-template-columns: 1fr;
+  }
+
+  .writing-page .writing-hero {
+    min-height: auto;
+  }
+
+  .writing-hero__image-container,
+  .writing-hero__image {
+    min-height: 24rem;
+  }
+
+  .featured-writing__card {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-writing__image-container,
+  .featured-writing__image {
+    min-height: 26rem;
+    max-height: 38rem;
+  }
+
+  .writing-category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .poetry-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .writing-philosophy__image-container,
+  .writing-philosophy__image {
+    min-height: 24rem;
+    max-height: 35rem;
+  }
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVENESS
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .writing-page section {
+    width: min(100% - 1.25rem, var(--writing-page-width));
+    padding-block: 3.5rem;
+  }
+
+  .section-divider {
+    width: calc(100% - 1.25rem);
+  }
+
+  .writing-hero__title {
+    font-size: clamp(2.8rem, 15vw, 4.5rem);
+  }
+
+  .writing-hero__image-container,
+  .writing-hero__image {
+    min-height: 20rem;
+  }
+
+  .featured-writing__image-container,
+  .featured-writing__image {
+    min-height: 22rem;
+  }
+
+  .featured-writing__content {
+    padding: 1.5rem;
+  }
+
+  .writing-category-card {
+    grid-template-columns: 1fr;
+  }
+
+  .writing-category-card__image-container,
+  .writing-category-card__image {
+    min-height: 15rem;
+    max-height: 18rem;
+  }
+
+  .writing-card-grid,
+  .poetry-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .writing-card__image {
+    height: 20rem;
+  }
+
+  .reflection-preview {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .reflection-preview:hover {
+    padding-inline: 0;
+  }
+
+  .featured-writing__buttons {
+    flex-direction: column;
+  }
+
+  .writing-page .button {
+    width: 100%;
+  }
+
+  .writing-philosophy__image-container,
+  .writing-philosophy__image {
+    min-height: 20rem;
+  }
+
+  .writing-page .writing-contact {
+    width: calc(100% - 1.25rem);
+    padding: 3rem 1.25rem;
+    border-radius: var(--writing-radius-medium);
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 420px) {
+  .writing-page section {
+    width: min(100% - 1rem, var(--writing-page-width));
+  }
+
+  .section-divider {
+    width: calc(100% - 1rem);
+  }
+
+  .writing-category-card__content,
+  .writing-card__content,
+  .poetry-card {
+    padding: 1.25rem;
+  }
+
+  .theme-list {
+    gap: 0.6rem;
+  }
+
+  .theme-list__item {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.82rem;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .writing-page *,
+  .writing-page *::before,
+  .writing-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
