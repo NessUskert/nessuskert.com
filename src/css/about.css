@@ -7,6 +7,9 @@
     margin: 5rem auto 3rem;
     padding: 0 2rem;
     text-align: center;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
 }
 
 .about-intro h2 {
