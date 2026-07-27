@@ -1,0 +1,599 @@
+/* ========================================
+   MY ATHLETICS
+   More angular, energetic, and editorial
+======================================== */
+
+.athletics-main {
+  overflow-x: hidden;
+  background-color: var(--color-primary-50);
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.athletics-hero {
+  position: relative;
+  display: grid;
+  min-height: 620px;
+  padding: 7rem 8%;
+  align-content: center;
+  text-align: left;
+  background-color: var(--color-primary-900);
+  overflow: hidden;
+}
+
+.athletics-hero::before {
+  position: absolute;
+  top: -15%;
+  right: -8%;
+  width: 45%;
+  height: 140%;
+  content: "";
+  background-color: var(--color-primary-700);
+  transform: rotate(12deg);
+}
+
+.athletics-hero::after {
+  position: absolute;
+  right: 8%;
+  bottom: 3rem;
+  width: 180px;
+  height: 10px;
+  content: "";
+  background-color: var(--color-primary-400);
+}
+
+.athletics-eyebrow,
+.athletics-title,
+.athletics-description {
+  position: relative;
+  z-index: 1;
+}
+
+.athletics-eyebrow {
+  margin: 0 0 1.25rem;
+  color: var(--color-primary-300);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.24rem;
+  text-transform: uppercase;
+}
+
+.athletics-title {
+  max-width: 900px;
+  margin: 0;
+  color: var(--color-primary-50);
+  font-family: var(--font-heading);
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 500;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.athletics-description {
+  max-width: 720px;
+  margin: 2.5rem 0 0;
+  color: var(--color-primary-100);
+  font-family: var(--font-body);
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   INTRODUCTION
+======================================== */
+
+.athletics-intro {
+  display: grid;
+  padding: 7rem 8%;
+  grid-template-columns: 0.35fr 1fr;
+  gap: 4rem;
+  background-color: var(--color-primary-50);
+}
+
+.athletics-intro::before {
+  content: "01";
+  color: var(--color-primary-300);
+  font-family: var(--font-heading);
+  font-size: clamp(5rem, 12vw, 10rem);
+  font-weight: 700;
+  line-height: 0.8;
+}
+
+.athletics-intro-content {
+  max-width: 900px;
+}
+
+.athletics-intro-title {
+  margin: 0 0 1.5rem;
+  color: var(--color-primary-900);
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.athletics-intro-text {
+  max-width: 760px;
+  margin: 0;
+  color: var(--color-primary-700);
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+
+
+/* ========================================
+   DISCIPLINES
+======================================== */
+
+.athletics-disciplines {
+  display: grid;
+  padding: 0;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  background-color: var(--color-primary-800);
+}
+
+.athletics-discipline-card {
+  display: flex;
+  min-height: 430px;
+  padding: 3rem 2rem;
+  flex-direction: column;
+  border-right: 1px solid var(--color-primary-700);
+  background-color: var(--color-primary-800);
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.athletics-discipline-card:last-child {
+  border-right: none;
+}
+
+.athletics-discipline-card:hover {
+  background-color: var(--color-primary-700);
+  transform: translateY(-8px);
+}
+
+.athletics-card-title {
+  margin: 0 0 1.5rem;
+  color: var(--color-primary-50);
+  font-family: var(--font-heading);
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.athletics-card-text {
+  margin: 0;
+  flex-grow: 1;
+  color: var(--color-primary-200);
+  font-family: var(--font-body);
+  line-height: 1.8;
+}
+
+.athletics-card-link {
+  display: inline-block;
+  width: fit-content;
+  margin-top: 2rem;
+  color: var(--color-primary-300);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--color-primary-400);
+  transition:
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.athletics-card-link:hover {
+  padding-left: 0.5rem;
+  color: var(--color-primary-50);
+}
+
+
+/* ========================================
+   FEATURED FOCUS
+======================================== */
+
+.athletics-featured {
+  position: relative;
+  padding: 8rem 8%;
+  background-color: var(--color-primary-400);
+  overflow: hidden;
+}
+
+.athletics-featured::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32%;
+  height: 100%;
+  content: "";
+  background-color: var(--color-primary-500);
+  clip-path: polygon(35% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.athletics-featured-content {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+}
+
+.athletics-featured-label {
+  margin: 0 0 1rem;
+  color: var(--color-primary-900);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.18rem;
+  text-transform: uppercase;
+}
+
+.athletics-featured-title {
+  max-width: 720px;
+  margin: 0 0 1.5rem;
+  color: var(--color-primary-900);
+  font-family: var(--font-heading);
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.athletics-featured-text {
+  max-width: 720px;
+  margin: 0;
+  color: var(--color-primary-900);
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.85;
+}
+
+.athletics-featured-link {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.9rem 1.4rem;
+  color: var(--color-primary-50);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-decoration: none;
+  background-color: var(--color-primary-900);
+  border: 2px solid var(--color-primary-900);
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.athletics-featured-link:hover {
+  color: var(--color-primary-900);
+  background-color: transparent;
+}
+
+
+/* ========================================
+   PROGRESS AND MILESTONES
+======================================== */
+
+.athletics-progress {
+  padding: 7rem 8%;
+  background-color: var(--color-primary-50);
+}
+
+.athletics-progress-heading {
+  display: grid;
+  margin-bottom: 4rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: end;
+}
+
+.athletics-progress-title {
+  margin: 0;
+  color: var(--color-primary-900);
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.athletics-progress-intro {
+  margin: 0;
+  color: var(--color-primary-700);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.athletics-progress-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 2px solid var(--color-primary-800);
+  border-bottom: 2px solid var(--color-primary-800);
+}
+
+.athletics-progress-card {
+  padding: 3rem 2rem;
+  border-right: 1px solid var(--color-primary-300);
+}
+
+.athletics-progress-card:last-child {
+  border-right: none;
+}
+
+.athletics-progress-number {
+  margin: 0 0 2rem;
+  color: var(--color-primary-500);
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.athletics-progress-card-title {
+  margin: 0 0 1rem;
+  color: var(--color-primary-900);
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.athletics-progress-card-text {
+  margin: 0;
+  color: var(--color-primary-700);
+  font-family: var(--font-body);
+  line-height: 1.75;
+}
+
+
+/* ========================================
+   GALLERY
+======================================== */
+
+.athletics-gallery {
+  padding: 7rem 8%;
+  background-color: var(--color-primary-100);
+}
+
+.athletics-gallery-content {
+  display: grid;
+  margin-bottom: 3rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: end;
+}
+
+.athletics-gallery-title {
+  margin: 0;
+  color: var(--color-primary-900);
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 500;
+}
+
+.athletics-gallery-text {
+  margin: 0;
+  color: var(--color-primary-700);
+  font-family: var(--font-body);
+  line-height: 1.8;
+}
+
+.athletics-gallery-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.athletics-gallery-placeholder {
+  display: grid;
+  min-height: 330px;
+  place-items: end start;
+  padding: 1.5rem;
+  color: var(--color-primary-50);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  background:
+    linear-gradient(
+      rgba(36, 54, 28, 0.08),
+      rgba(36, 54, 28, 0.72)
+    ),
+    var(--color-primary-500);
+  border: none;
+  border-radius: 0;
+}
+
+.athletics-gallery-placeholder:first-child {
+  min-height: 420px;
+}
+
+.athletics-gallery-placeholder span {
+  padding: 0.5rem 0.75rem;
+  background-color: rgba(36, 54, 28, 0.8);
+}
+
+
+/* ========================================
+   FUTURE GOALS
+======================================== */
+
+.athletics-future {
+  display: grid;
+  padding: 7rem 8%;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 5rem;
+  background-color: var(--color-primary-900);
+}
+
+.athletics-future-content {
+  position: sticky;
+  top: 7rem;
+  align-self: start;
+}
+
+.athletics-future-label {
+  margin: 0 0 1rem;
+  color: var(--color-primary-400);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.18rem;
+  text-transform: uppercase;
+}
+
+.athletics-future-title {
+  margin: 0;
+  color: var(--color-primary-50);
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.athletics-goals-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: athletics-goals;
+}
+
+.athletics-goal {
+  position: relative;
+  padding: 2rem 1rem 2rem 5rem;
+  color: var(--color-primary-100);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  border-top: 1px solid var(--color-primary-700);
+  counter-increment: athletics-goals;
+}
+
+.athletics-goal:last-child {
+  border-bottom: 1px solid var(--color-primary-700);
+}
+
+.athletics-goal::before {
+  position: absolute;
+  top: 1.7rem;
+  left: 0;
+  content: counter(athletics-goals, decimal-leading-zero);
+  color: var(--color-primary-400);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1000px) {
+  .athletics-disciplines {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .athletics-discipline-card:nth-child(2) {
+    border-right: none;
+  }
+
+  .athletics-progress-heading,
+  .athletics-gallery-content,
+  .athletics-future {
+    grid-template-columns: 1fr;
+  }
+
+  .athletics-gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .athletics-gallery-placeholder:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .athletics-future-content {
+    position: static;
+  }
+}
+
+@media (max-width: 750px) {
+  .athletics-hero,
+  .athletics-intro,
+  .athletics-featured,
+  .athletics-progress,
+  .athletics-gallery,
+  .athletics-future {
+    padding: 5rem 6%;
+  }
+
+  .athletics-intro {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .athletics-intro::before {
+    font-size: 5rem;
+  }
+
+  .athletics-progress-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .athletics-progress-card {
+    border-right: none;
+    border-bottom: 1px solid var(--color-primary-300);
+  }
+
+  .athletics-progress-card:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .athletics-hero {
+    min-height: auto;
+    padding: 5rem 1.25rem;
+  }
+
+  .athletics-hero::before,
+  .athletics-hero::after {
+    display: none;
+  }
+
+  .athletics-intro,
+  .athletics-featured,
+  .athletics-progress,
+  .athletics-gallery,
+  .athletics-future {
+    padding: 4rem 1.25rem;
+  }
+
+  .athletics-disciplines {
+    grid-template-columns: 1fr;
+  }
+
+  .athletics-discipline-card {
+    min-height: 320px;
+    border-right: none;
+    border-bottom: 1px solid var(--color-primary-700);
+  }
+
+  .athletics-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .athletics-gallery-placeholder,
+  .athletics-gallery-placeholder:first-child {
+    min-height: 260px;
+    grid-column: auto;
+  }
+
+  .athletics-goal {
+    padding-left: 4rem;
+  }
+}
