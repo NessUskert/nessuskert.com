@@ -3,6 +3,7 @@
     src: url("../../public/assets/fonts/Cinzel/static/Cinzel-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -10,4 +11,5 @@
     src: url("../../public/assets/fonts/Lora/static/Lora-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
