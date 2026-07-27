@@ -351,11 +351,17 @@
   gap: clamp(2.5rem, 7vw, 6rem);
 }
 
+.hexplore-world__image,
 .hexplore-world__image img {
   min-height: 30rem;
   border-radius: var(--hexplore-radius-large);
   object-fit: cover;
   box-shadow: var(--hexplore-shadow-medium);
+}
+
+/* Holds the setting image area open until artwork is placed. */
+.hexplore-world__image {
+  background-color: var(--hexplore-green-200);
 }
 
 .hexplore-world__content {
@@ -571,6 +577,7 @@
     max-height: 26rem;
   }
 
+  .hexplore-world__image,
   .hexplore-world__image img {
     min-height: 22rem;
   }

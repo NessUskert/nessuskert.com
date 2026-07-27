@@ -13,7 +13,8 @@
     font-size: var(--font-size-caption);
 
     background: var(--color-primary-900);
-    color: var(--color-primary-700);
+    /* Pale text on the dark field: the 700 step failed WCAG AA at ~2.1:1. */
+    color: var(--color-primary-50);
 }
 
 .footer-links {
@@ -28,4 +29,9 @@
 
 .footer-links a:hover {
     color: var(--color-primary-300);
+}
+
+.footer-links a:focus-visible {
+    outline: 2px solid var(--color-primary-300);
+    outline-offset: 3px;
 }

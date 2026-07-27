@@ -486,6 +486,8 @@
 .writing-card__image-link {
   display: block;
   overflow: hidden;
+  /* Holds the card's image area open whether or not artwork is present yet. */
+  min-height: clamp(18rem, 35vw, 28rem);
   background-color: var(--writing-green-200);
 }
 
@@ -881,6 +883,10 @@
   .writing-card-grid,
   .poetry-card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .writing-card__image-link {
+    min-height: 20rem;
   }
 
   .writing-card__image {

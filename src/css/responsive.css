@@ -13,6 +13,17 @@
   .intro h2 {
     font-size: 2rem;
   }
+
+  /* The 900px banner is taller than a phone screen; cap it so visitors
+     are not scrolling past a screen and a half before reaching content. */
+  .hero-banner {
+    height: 70vh;
+    min-height: 400px;
+  }
+
+  .home {
+    padding: 48px 6%;
+  }
 }
 
 @media (max-width: 700px) {

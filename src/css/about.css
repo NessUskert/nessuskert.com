@@ -12,7 +12,10 @@
     padding-inline: 1.5rem;
 }
 
-.about-intro h2 {
+.about-intro h1 {
+    /* Promoted from h2 so the page has a top-level heading. The explicit
+       size keeps it rendering exactly as it did before. */
+    font-size: var(--font-size-h2);
     margin-bottom: 1.5rem;
 }
 

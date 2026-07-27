@@ -66,12 +66,14 @@
 }
 
 .hero-text h1 {
-    font-size: 4rem;
+    /* Caps at the original 4rem on desktop; scales down rather than
+       overflowing on narrow screens. */
+    font-size: clamp(2.5rem, 8vw, 4rem);
     margin-bottom: 12px;
 }
 
 .hero-text p {
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 3.5vw, 1.3rem);
 }
 
 .hero-banner {

@@ -506,6 +506,20 @@
   .excerpt-page .button {
     width: 100%;
   }
+
+  .excerpt-cta {
+    width: calc(100% - 1.25rem);
+    padding: 3.5rem 1.25rem;
+    border-radius: 1.5rem;
+  }
+
+  .excerpt-cta__buttons {
+    flex-direction: column;
+  }
+
+  .excerpt-cta__button {
+    width: 100%;
+  }
 }
 
 
@@ -726,19 +740,6 @@
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-  }
-  .excerpt-cta {
-  width: calc(100% - 1.25rem);
-  padding: 3.5rem 1.25rem;
-  border-radius: 1.5rem;
-  }
-
-  .excerpt-cta__buttons {
-    flex-direction: column;
-  }
-
-  .excerpt-cta__button {
-    width: 100%;
   }
 }
 

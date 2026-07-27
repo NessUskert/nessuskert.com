@@ -35,7 +35,6 @@
   display: flex;
   list-style: none;
   gap: 24px;
-  margin-right: left;
 }
 
 .nav-links li {
@@ -48,11 +47,17 @@
   font-weight: 600;
   font-family: var(--font-heading);
   font-size: small;
-  ;
 }
 
 .nav-links a:hover {
   color: var(--color-primary-600);
+}
+
+.logo:focus-visible,
+.nav-links a:focus-visible {
+  outline: 2px solid var(--color-primary-600);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
 .dropdown {
@@ -88,6 +93,12 @@
   color: var(--color-primary-900);
 }
 
-.dropdown:hover .dropdown-menu {
+/*
+  Hover opens the menu for pointer users; focus-within opens it for keyboard
+  users tabbing through the trigger and for touch taps. Without focus-within
+  the dropdown contents are unreachable without a mouse.
+*/
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
   display: block;
 }
