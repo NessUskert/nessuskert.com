@@ -456,6 +456,90 @@
 
 
 /* ========================================
+   ORGANIZATIONS
+======================================== */
+
+.athletics-organizations {
+  padding: 7rem 8%;
+  background-color: var(--color-primary-50);
+}
+
+.athletics-organizations-heading {
+  display: grid;
+  margin-bottom: 4rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: end;
+}
+
+.athletics-organizations-title {
+  margin: 0;
+  color: var(--color-primary-900);
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.athletics-organizations-intro {
+  margin: 0;
+  color: var(--color-primary-700);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.athletics-organizations-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 2px solid var(--color-primary-800);
+}
+
+.athletics-organization {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 3rem;
+  align-items: baseline;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--color-primary-300);
+}
+
+.athletics-organization-role {
+  color: var(--color-primary-600);
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+}
+
+.athletics-organization-link {
+  color: var(--color-primary-900);
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-primary-400);
+  transition:
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.athletics-organization-link:hover {
+  padding-left: 0.5rem;
+  color: var(--color-primary-600);
+}
+
+/* The waiting row. Not a link, so it carries no underline or hover. */
+.athletics-organization-name {
+  color: var(--color-primary-700);
+  font-family: var(--font-body);
+  line-height: 1.8;
+}
+
+
+/* ========================================
    FUTURE GOALS
 ======================================== */
 
@@ -541,6 +625,7 @@
 
   .athletics-progress-heading,
   .athletics-gallery-content,
+  .athletics-organizations-heading,
   .athletics-future {
     grid-template-columns: 1fr;
   }
@@ -565,8 +650,14 @@
   .athletics-featured,
   .athletics-progress,
   .athletics-gallery,
+  .athletics-organizations,
   .athletics-future {
     padding: 5rem 6%;
+  }
+
+  .athletics-organization {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 
   .athletics-intro {
@@ -607,6 +698,7 @@
   .athletics-featured,
   .athletics-progress,
   .athletics-gallery,
+  .athletics-organizations,
   .athletics-future {
     padding: 4rem 1.25rem;
   }

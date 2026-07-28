@@ -601,6 +601,27 @@ Commit `9308199` on `main`. 25 files, +4300 / −653. **Not pushed.**
 
 ---
 
+## Addendum — after sign-off
+
+Three further spaces were requested and built:
+
+- **My Writing** gained an Edenseek section (`#edenseek`) with a card for
+  the new comic *Venus*, a card for the *Egypt the Cat* series listing its
+  six titles, and a slot for future titles. A matching category card was
+  added to the grid above.
+- **My Music** gained a "Listen" section (`#listen`) with a card for the
+  single *Leo*.
+- **My Athletics** gained a "Clubs & Organizations" section.
+
+All three are structurally complete but waiting on details: the *Venus*
+cover and description, the Spotify URL for *Leo*, and the list of
+organizations. Each carries a copy-paste template in an HTML comment
+marking exactly where the missing value goes.
+
+Committed separately.
+
+---
+
 ## Session Rating
 
 **Productivity:** /10

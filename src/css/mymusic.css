@@ -230,6 +230,112 @@
 
 
 /* ========================================
+   LISTEN
+======================================== */
+
+.music-listen {
+    padding: 6rem 8%;
+
+    background: var(--color-primary-100);
+}
+
+.music-listen-title {
+    margin-bottom: 1rem;
+
+    color: var(--color-primary-800);
+
+    font-family: var(--font-heading);
+    font-size: clamp(2rem,5vw,3.5rem);
+    font-weight: 500;
+}
+
+.music-listen-intro {
+    max-width: 900px;
+
+    margin-bottom: 3rem;
+
+    color: var(--color-primary-700);
+
+    line-height: 1.8;
+}
+
+.music-listen-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    max-width: 900px;
+}
+
+.music-release-card {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 200px;
+
+    padding: 2.5rem;
+
+    background: white;
+
+    border: 1px solid var(--color-primary-200);
+    border-radius: 1.5rem;
+}
+
+.music-release-card--placeholder {
+    background: rgba(255,255,255,.55);
+
+    border-style: dashed;
+}
+
+.music-release-type {
+    margin-bottom: .75rem;
+
+    color: var(--color-primary-600);
+
+    font-family: var(--font-heading);
+    font-size: .8rem;
+    font-weight: 700;
+
+    letter-spacing: .16rem;
+    text-transform: uppercase;
+}
+
+.music-release-link {
+    width: fit-content;
+
+    margin-top: auto;
+    padding-top: 1.5rem;
+
+    color: var(--color-primary-600);
+
+    font-family: var(--font-heading);
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: .25s;
+}
+
+.music-release-link:hover {
+    color: var(--color-primary-800);
+
+    transform: translateX(5px);
+}
+
+/* The waiting state. Not a link, so it carries no hover treatment. */
+.music-release-unavailable {
+    margin-top: auto;
+    padding-top: 1.5rem;
+
+    color: var(--color-primary-700);
+
+    font-family: var(--font-heading);
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+
+/* ========================================
    FEATURED WORK
 ======================================== */
 
@@ -437,13 +543,15 @@
     .music-intro,
     .music-sections,
     .music-songs,
+    .music-listen,
     .music-featured,
     .music-showcase,
     .music-future{
         padding:4rem 6%;
     }
 
-    .music-songs-grid{
+    .music-songs-grid,
+    .music-listen-grid{
         grid-template-columns:1fr;
     }
 
@@ -456,7 +564,8 @@
     }
 
     .music-section-card,
-    .music-song-card{
+    .music-song-card,
+    .music-release-card{
         padding:2rem;
     }
 

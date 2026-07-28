@@ -534,6 +534,38 @@
 
 
 /* =========================================================
+   BOOK LIST
+   A numbered series inside a writing card.
+   ========================================================= */
+
+.writing-book-list {
+  margin: 0 0 1.75rem;
+  padding-left: 1.25rem;
+  color: var(--writing-text-light);
+  font-size: 0.98rem;
+  line-height: 1.9;
+}
+
+.writing-book-list li::marker {
+  color: var(--writing-green-700);
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.writing-book-list__note {
+  margin-left: 0.5rem;
+  color: var(--writing-green-700);
+  font-family: Arial, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
    PLACEHOLDER CARDS
    ========================================================= */
 
