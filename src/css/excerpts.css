@@ -366,6 +366,81 @@
 
 
 /* =========================================================
+   CITATIONS
+   For academic pieces: a superscript marker in the text, a
+   numbered note list, and a hanging-indent bibliography.
+   ========================================================= */
+
+.excerpt-reference {
+  font-size: 0.7em;
+  line-height: 0;
+  vertical-align: super;
+}
+
+.excerpt-reference a {
+  padding: 0 0.1em;
+  color: var(--excerpt-green-700);
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.excerpt-reference a:hover {
+  text-decoration: underline;
+}
+
+.excerpt-notes,
+.excerpt-bibliography {
+  margin: clamp(3.5rem, 8vw, 5rem) 0 0;
+  padding-top: 2rem;
+  border-top: 1px solid var(--excerpt-border);
+}
+
+.excerpt-notes__title,
+.excerpt-bibliography__title {
+  margin: 0 0 1.5rem;
+  color: var(--excerpt-green-900);
+  font-family: var(--excerpt-heading-font);
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.excerpt-notes ol {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.excerpt-notes li {
+  margin-bottom: 0.75rem;
+  color: var(--excerpt-text-light);
+  font-size: 0.85rem;
+  line-height: 1.65;
+}
+
+/* Citations read better with the author's surname flush left. */
+.excerpt-bibliography ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.excerpt-bibliography li {
+  margin-bottom: 0.9rem;
+  padding-left: 2rem;
+  color: var(--excerpt-text-light);
+  font-size: 0.85rem;
+  line-height: 1.65;
+  text-indent: -2rem;
+}
+
+.excerpt-notes a,
+.excerpt-bibliography a {
+  color: var(--excerpt-green-700);
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
    EXCERPT FOOTER
    ========================================================= */
 

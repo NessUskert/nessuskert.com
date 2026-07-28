@@ -613,69 +613,18 @@
 
 
 /* =========================================================
-   REFLECTION LIST
-   ========================================================= */
-
-.reflection-list {
-  border-top: 1px solid var(--writing-border);
-}
-
-.reflection-preview {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 2rem;
-  padding-block: 2rem;
-  border-bottom: 1px solid var(--writing-border);
-  transition: padding var(--writing-transition);
-}
-
-.reflection-preview:hover {
-  padding-inline: 1rem;
-}
-
-.reflection-preview__date {
-  margin: 0 0 0.5rem;
-  color: var(--writing-green-700);
-  font-family: Arial, sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.reflection-preview__title {
-  margin: 0;
-  color: var(--writing-green-900);
-  font-family: var(--writing-heading-font);
-  font-size: clamp(1.35rem, 3vw, 2rem);
-  font-weight: 500;
-}
-
-.reflection-preview__description {
-  max-width: 45rem;
-  margin: 0.75rem 0 0;
-  color: var(--writing-text-light);
-  line-height: 1.75;
-}
-
-.reflection-preview__link {
-  color: var(--writing-green-700);
-  font-family: Arial, sans-serif;
-  font-weight: 700;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-
-/* =========================================================
-   THEME LINKS
+   THEME LABELS
+   These name recurring ideas; they are deliberately not links,
+   so they carry no hover or focus treatment.
    ========================================================= */
 
 .theme-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .theme-list__item {
@@ -687,20 +636,7 @@
   font-family: Arial, sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
-  text-decoration: none;
   box-shadow: var(--writing-shadow-small);
-  transition:
-    background-color var(--writing-transition),
-    border-color var(--writing-transition),
-    color var(--writing-transition),
-    transform var(--writing-transition);
-}
-
-.theme-list__item:hover {
-  transform: translateY(-2px);
-  border-color: var(--writing-green-700);
-  background-color: var(--writing-green-700);
-  color: #ffffff;
 }
 
 
@@ -891,15 +827,6 @@
 
   .writing-card__image {
     height: 20rem;
-  }
-
-  .reflection-preview {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .reflection-preview:hover {
-    padding-inline: 0;
   }
 
   .featured-writing__buttons {

@@ -408,11 +408,48 @@
   border-radius: 0;
 }
 
-.athletics-gallery-placeholder:first-child {
+/*
+  A filled tile. It carries the same scrim and the same corner label as
+  the placeholder above, so a gallery of photographs and empty slots
+  still reads as one row.
+*/
+.athletics-gallery-item {
+  position: relative;
+  margin: 0;
+  min-height: 330px;
+  overflow: hidden;
+}
+
+.athletics-gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.athletics-gallery-item figcaption {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: end start;
+  padding: 1.5rem;
+  color: var(--color-primary-50);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  background:
+    linear-gradient(
+      rgba(36, 54, 28, 0.08),
+      rgba(36, 54, 28, 0.72)
+    );
+}
+
+.athletics-gallery-placeholder:first-child,
+.athletics-gallery-item:first-child {
   min-height: 420px;
 }
 
-.athletics-gallery-placeholder span {
+.athletics-gallery-placeholder span,
+.athletics-gallery-item figcaption span {
   padding: 0.5rem 0.75rem;
   background-color: rgba(36, 54, 28, 0.8);
 }
@@ -512,7 +549,8 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .athletics-gallery-placeholder:first-child {
+  .athletics-gallery-placeholder:first-child,
+  .athletics-gallery-item:first-child {
     grid-column: 1 / -1;
   }
 
@@ -588,7 +626,9 @@
   }
 
   .athletics-gallery-placeholder,
-  .athletics-gallery-placeholder:first-child {
+  .athletics-gallery-placeholder:first-child,
+  .athletics-gallery-item,
+  .athletics-gallery-item:first-child {
     min-height: 260px;
     grid-column: auto;
   }

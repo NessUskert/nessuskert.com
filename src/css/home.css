@@ -30,10 +30,13 @@
   font-weight: 525;
 }
 
+/* The heading and portrait stay centred; the introduction is now several
+   paragraphs long, and centred prose at this measure is hard to read. */
 .intro p {
   max-width: 650px;
   margin: 0 auto 32px;
   font-size: 1.1rem;
+  text-align: left;
 }
 
 .hero-banner {

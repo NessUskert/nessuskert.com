@@ -157,40 +157,61 @@
   box-shadow: 0 22px 42px rgba(36, 54, 28, 0.15);
 }
 
-.extracurricular-card:nth-child(1) {
+/*
+  The mosaic cycles every six cards so the pattern continues however
+  many activities there are. Each run of three closes a 12-column row:
+  5 + 3 + 4, then 4 + 5 + 3.
+*/
+
+.extracurricular-card:nth-child(6n + 1) {
   grid-column: span 5;
   background-color: var(--color-primary-50);
   border-radius: 2rem 0.5rem 0.5rem 0.5rem;
 }
 
-.extracurricular-card:nth-child(2) {
+.extracurricular-card:nth-child(6n + 2) {
   grid-column: span 3;
   background-color: var(--color-primary-200);
   border-radius: 0.5rem 2rem 0.5rem 0.5rem;
 }
 
-.extracurricular-card:nth-child(3) {
+.extracurricular-card:nth-child(6n + 3) {
   grid-column: span 4;
   background-color: var(--color-primary-300);
   border-radius: 0.5rem 0.5rem 2rem 0.5rem;
 }
 
-.extracurricular-card:nth-child(4) {
+.extracurricular-card:nth-child(6n + 4) {
   grid-column: span 4;
   background-color: var(--color-primary-200);
   border-radius: 0.5rem 0.5rem 0.5rem 2rem;
 }
 
-.extracurricular-card:nth-child(5) {
+.extracurricular-card:nth-child(6n + 5) {
   grid-column: span 5;
   background-color: var(--color-primary-400);
   border-radius: 2rem 0.5rem 2rem 0.5rem;
 }
 
-.extracurricular-card:nth-child(6) {
+/*
+  The 500 step was the darkest tile, but body text on it measured about
+  3:1 and failed WCAG AA. Stepping the tile back to 300 keeps the
+  mosaic's tonal escalation and clears the threshold.
+*/
+.extracurricular-card:nth-child(6n + 6) {
   grid-column: span 3;
-  background-color: var(--color-primary-500);
+  background-color: var(--color-primary-300);
   border-radius: 0.5rem 2rem 0.5rem 2rem;
+}
+
+.extracurricular-card-years {
+  margin: 0 0 0.75rem;
+  color: var(--color-primary-900);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16rem;
+  text-transform: uppercase;
 }
 
 .extracurricular-card-title {
@@ -202,10 +223,11 @@
   line-height: 1.08;
 }
 
+/* 900 rather than 800: the tiles run to the 400 step, where 800 fails AA. */
 .extracurricular-card-text {
   margin: 0;
   flex-grow: 1;
-  color: var(--color-primary-800);
+  color: var(--color-primary-900);
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.75;
@@ -326,7 +348,9 @@
 }
 
 .extracurricular-gallery-item {
+  position: relative;
   display: flex;
+  margin: 0;
   padding: 1.5rem;
   align-items: flex-end;
   color: var(--color-primary-50);
@@ -334,17 +358,40 @@
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: 0.04rem;
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(36, 54, 28, 0.08),
-      rgba(36, 54, 28, 0.78)
-    ),
-    var(--color-primary-500);
+  background-color: var(--color-primary-500);
   overflow: hidden;
   transition:
     transform 0.25s ease,
     filter 0.25s ease;
+}
+
+.extracurricular-gallery-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*
+  The scrim sits above the photograph and below the label, so the same
+  tile reads the same way whether it holds artwork or is still empty.
+*/
+.extracurricular-gallery-item::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(
+    to bottom,
+    rgba(36, 54, 28, 0.08),
+    rgba(36, 54, 28, 0.78)
+  );
+  pointer-events: none;
+}
+
+.extracurricular-gallery-item figcaption {
+  position: relative;
+  z-index: 1;
 }
 
 .extracurricular-gallery-item:hover {
