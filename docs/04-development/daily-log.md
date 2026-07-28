@@ -411,3 +411,200 @@ The contact page displayed with default browser styling after deploying to GitHu
 
 ```bash
 git commit -m "Add contact page and improve navigation structure"
+```
+
+---
+
+## Session Rating
+
+**Productivity:** /10
+
+**Confidence:** /10
+
+**Overall:** /10
+
+# Daily Log
+
+**Project:** nessuskert.com Personal Website
+**Date:** July 28, 2026
+**Session #:** 5
+**Duration:**
+
+> The 2026-07-27 repository-analysis session is recorded separately in
+> `docs/06-design/session-handoff-2026-07-27.md` rather than in this log.
+
+---
+
+## Session Goal
+
+Publish the writing, music, and activity content that had been sitting in
+the repository unused, working only from `docs/01-planning/content-needed.md`
+and the files in `public/assets/writing/`.
+
+---
+
+## Planned Tasks
+
+- [x] Build pages for the finished pieces that were not on the site
+- [x] Apply the answers recorded in `content-needed.md` (D1–D6, §5.1, §5.2, §6)
+- [x] Place the approved images
+- [x] Adjust layouts only where the new content required it
+
+---
+
+## Completed
+
+- [x] Built `writing/heroism-did-not-create-heroes.html` — the World War II
+      superhero paper, with all 33 footnotes and its bibliography.
+- [x] Built `writing/blood-moon-review.html` — the Apes & Androids review.
+- [x] Built `writing/lasrever.html` and `writing/boy.html`, replacing the
+      Petrichor and "We're Entering the Fog" stubs.
+- [x] Built `music/outskirts.html`, `music/heart.html`, and
+      `music/scared-of-heaven.html` in a new `src/pages/music/` folder that
+      mirrors `src/pages/writing/`.
+- [x] Filled `the-horizon-line-at-dusk.html` and `i-agree-to-disagree.html`.
+- [x] Replaced the homepage introduction with `docs/09-websitecontent/bio.md`
+      and reworded the interactive-games sentence as intent, not a claim.
+- [x] Replaced the six generic extracurricular cards with the 15 real
+      activities, each carrying a year range.
+- [x] Added the supplied card descriptions to My Music and My Academics.
+- [x] Placed the five approved paintings, the Comic Con photographs, the
+      Engineering Club flyer, and the two track photographs.
+- [x] Added a Jonathan character card to the Hearth explorer.
+- [x] Removed the journals and reflections section and its now-dead CSS.
+- [x] Made the writing theme labels non-clickable.
+- [x] Added footnote, notes-list, and bibliography treatments to
+      `excerpts.css`.
+- [x] Verified every page in the browser at 1400px, 1022px, and 420px.
+- [x] Confirmed all internal links, anchors, and assets resolve, and that
+      every page has exactly one `<h1>`.
+
+---
+
+## Challenges
+
+The research essay could not be published whole. Sections 1 through 3 of
+`agreetodisagree.txt` still contain literal `___` blanks and one sentence
+that stops mid-clause, so only the introduction and conclusion went up, with
+a note saying the rest is in progress.
+
+`thehorizonlineatdusk.txt` has a plot-planning note to self embedded in the
+middle of the story. It is not story text and was left off the page.
+
+Fifteen extracurricular cards did not fit a mosaic whose column spans and
+corner rounding were written for exactly six, so the pattern had to be made
+to repeat.
+
+Placing more photographs made the existing image weight much worse. My
+Writing now loads roughly 35 MB.
+
+---
+
+## Decisions Made
+
+- **The extracurricular mosaic cycles.** `nth-child(1…6)` became
+  `nth-child(6n+1…6n+6)` so the layout repeats for any number of cards.
+  Fifteen cards fill exactly five 12-column rows. The layout stays coupled to
+  source order, which is now noted in both the HTML and the CSS.
+- **Gallery tiles take real images.** Both the Athletics and Extracurriculars
+  galleries became `<figure>` elements with an `<img>` and an overlaid
+  caption, keeping the existing scrim and corner label so filled and empty
+  tiles still read as one row. Real images were chosen over CSS backgrounds
+  so the photographs carry alt text.
+- **Songs live under `src/pages/music/`,** not in `writing/`, because they
+  belong to My Music even though they use the excerpt template.
+- **Two contrast fixes on the extracurricular cards.** Body text on the 500
+  step measured about 3.0:1 and failed WCAG AA. With fifteen cards that
+  failure would have hit three tiles instead of one, so card text moved to
+  the 900 step and the darkest tile stepped back from 500 to 300. Both are
+  moves within the existing ramp.
+- **Dead `href="#"` links were removed** rather than left jumping to the top
+  of the page. They return when their sub-pages exist.
+- **Typos were fixed in short card blurbs but not inside the published
+  pieces.** Altering the wording of finished academic and creative writing is
+  a decision for the author, so those were listed for review instead.
+- **The homepage introduction is left-aligned.** It is now three long
+  paragraphs, and centred prose at that measure is hard to read.
+
+---
+
+## Lessons Learned
+
+Technical facts established this session, for reference:
+
+- CSS `nth-child(An+B)` makes a positional pattern repeat indefinitely, which
+  is what lets a hand-built mosaic accept any number of items.
+- A `<figure>` can hold an absolutely positioned `<img>` with the scrim on a
+  `::after` pseudo-element and the `<figcaption>` above it. This keeps a
+  photograph accessible while preserving a label overlay.
+- `white-space: pre-line` preserves typed line breaks and collapses the
+  surrounding indentation, which is why the poem pages can be indented
+  normally in the source.
+- `loading="lazy"` defers below-the-fold images with no dependency and no
+  build step, but it does not reduce the bytes of an oversized file.
+- WCAG AA needs 4.5:1 for body text. On this palette, the 800 step fails
+  against the 400 and 500 steps; the 900 step clears the 400 step but not
+  the 500.
+
+---
+
+## Next Session
+
+1. **Compress the images.** This is the largest remaining visitor-facing
+   problem and it needs no design decisions. `sunglasses.jpg` is 11.2 MB,
+   `hearthimage.jpg` 8.6 MB, `flowerpot.png` 4.4 MB and loaded twenty times
+   on About, and `pwlogo.png` is 601 KB for a 40-pixel logo.
+2. Decide whether to push commit `9308199` to the live site.
+3. Supply Jonathan's role and a one-line description.
+4. Give the About marquee a `prefers-reduced-motion` guard. It is the only
+   `@keyframes` on the site and currently runs regardless of the setting.
+5. Fill the remaining image slots listed in `content-needed.md`.
+
+---
+
+## Files Modified
+
+**New**
+
+- `src/pages/writing/heroism-did-not-create-heroes.html`
+- `src/pages/writing/blood-moon-review.html`
+- `src/pages/writing/lasrever.html`
+- `src/pages/writing/boy.html`
+- `src/pages/music/outskirts.html`
+- `src/pages/music/heart.html`
+- `src/pages/music/scared-of-heaven.html`
+
+**Removed**
+
+- `src/pages/writing/petrichor.html`
+- `src/pages/writing/were-entering-the-fog.html`
+
+**Changed**
+
+- `index.html`, `sitemap.xml`
+- `src/pages/mywriting.html`, `hexplore.html`, `mymusic.html`,
+  `myacademics.html`, `myathletics.html`, `myextracurriculars.html`
+- `src/pages/writing/essays.html`, `i-agree-to-disagree.html`,
+  `the-horizon-line-at-dusk.html`
+- `src/css/excerpts.css`, `mywriting.css`, `mymusic.css`, `myathletics.css`,
+  `myextracurriculars.css`, `home.css`
+
+---
+
+## Commit
+
+```bash
+git commit -m "Publish supplied writing, music, and activity content"
+```
+
+Commit `9308199` on `main`. 25 files, +4300 / −653. **Not pushed.**
+
+---
+
+## Session Rating
+
+**Productivity:** /10
+
+**Confidence:** /10
+
+**Overall:** /10

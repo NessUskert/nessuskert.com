@@ -127,3 +127,90 @@ git commit -m "Build initial homepage prototype and establish design system"
 - [ ] Navigation links were more complicated due to the current folder structure.
 - [ ] Project organization still needs refinement as the site grows.
 - [ ] Homepage styling is functional but remains an early prototype.
+
+---
+
+# End Work Checklist
+
+**Project:** nessuskert.com
+**Date:** 2026-07-28
+**Session #:** 5
+**Duration:**
+
+Boxes are ticked only where the step was actually carried out.
+
+---
+
+## 1. Review changes
+
+- [x] Save all files.
+- [x] Test the site locally (served over HTTP, not `file://`).
+- [x] Check mobile and desktop views — verified at 1400px, 1022px, and 420px.
+- [x] Run `git status`.
+- [x] Confirm every internal link, anchor, and asset resolves.
+- [x] Confirm every page has exactly one `<h1>`.
+
+---
+
+## 2. Record progress
+
+- [x] Update `docs/04-development/daily-log.md`.
+- [x] Update `docs/04-development/change-log.md`.
+- [ ] Update `docs/04-development/lessons-learned.md` — still an empty stub.
+- [ ] Record decisions in `docs/02-architecture/decisions.md` — still an
+      empty stub. This session's decisions are in the daily log instead.
+- [ ] Update `docs/01-planning/backlog.md` — not touched.
+- [ ] Record bugs in `docs/04-development/bugs.md` — still an empty stub.
+      Known open items are listed under "Sign off" below.
+
+---
+
+## 3. Commit and deploy
+
+- [x] Review modified files.
+- [x] Write a clear commit message.
+- [x] Commit changes — `9308199` on `main`.
+- [ ] Push to GitHub — **deliberately not done.** Awaiting a decision on
+      whether to compress the images first.
+- [ ] Confirm GitHub Pages updated — blocked on the push.
+- [ ] Check the live site — blocked on the push.
+
+---
+
+## 4. Sign off
+
+### What was completed
+
+- Published six new pages and filled two that were empty templates.
+- Applied every answer recorded in `content-needed.md`.
+- Placed the approved artwork and photographs.
+- Extended the extracurricular mosaic to cycle for any number of cards.
+- Fixed a WCAG AA contrast failure on the extracurricular cards.
+- Removed roughly 22 dead links.
+
+### What should happen next time
+
+1. Compress the images. My Writing currently loads about 35 MB.
+2. Decide whether to push `9308199`.
+3. Supply Jonathan's role and description.
+4. Give the About marquee a `prefers-reduced-motion` guard.
+5. Review the six judgment calls recorded in the daily log — particularly
+   publishing only part of *"I Agree to Disagree"*.
+
+### Successes
+
+- Every finished piece of writing in the repository is now on the site.
+- The two pages that had no real content, My Music and My Extracurriculars,
+  both have substance now.
+- The layout changes extended existing patterns rather than replacing them.
+
+### Open problems
+
+- Image weight is the largest visitor-facing issue on the site.
+- The About marquee ignores `prefers-reduced-motion`; it is the only
+  `@keyframes` in the project.
+- `base.css` still imports `home.css` twice.
+- `about.html` skips h1 → h4; `hearth.html` runs h1 → h3 → h2.
+- `README.md` and `package.json` are both still out of date.
+- Several typos inside the two newly published pieces were left alone
+  pending an author decision; they are listed in the daily log.
