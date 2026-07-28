@@ -31,12 +31,32 @@ These block work more than any missing asset does.
 | # | Question | Blocks |
 |---|---|---|
 | D1 | The homepage promises visitors *"interactive puzzles, games, and exercises on each of the linked My Pages."* Build them, or reword the sentence? | The homepage currently makes a claim the site doesn't keep |
+
+ME: We will eventually add some games on some pages. Reword to express that.
+
 | D2 | Publish `docs/09-websitecontent/bio.md` as the homepage intro? It's finished, first-person, Central-Park-framed, and your hero image is Central Park. | Homepage copy |
+
+ME: Update the intro, while organizing it how you see fit.
+
 | D3 | Publish the WWII/superhero history paper? It names three peer editors and carries an honor pledge. | An entire finished essay, currently invisible |
+
+ME: Publish the paper.
+
 | D4 | Publish the *Blood Moon* album review? It still has `[a]`–`[q]` editing markers to strip. | My Music has no real content at all |
+
+ME: Publish the album review. We will link my published song to My Music later and I will add lyrics to my favorite songs.
+
 | D5 | Is the person in `angelwings.jpg` you, and is "PROMISES" your comic? | Best photo in the folder, currently unused |
+
+ME: Yes that is me, and no PROMISES is not my comic, it is my dad. Please implement angel wings in a place you think is good.
+
 | D6 | Do the ~30 "Explore →" links point at future sub-pages, or should they become in-page anchors? | 30 dead links across four pages |
+
+ME: They are future sub-pages. APART from the theme links in mywriting, those should not be clickable.
+
 | D7 | Should the pastel/multi-hue direction still happen, and if so when? | Long-term visual direction |
+
+ME: When we get to it.
 
 ---
 
@@ -62,6 +82,8 @@ All currently show pale-green placeholder blocks.
 **You may already have these.** See §5 — five of your paintings would fill
 most of this list today.
 
+ME: Use what you can without repeating images to fill up spaces, then tell me what still needs images and I'll find images. Also, for things that repeat, such as Hearth being at the top of My Writing and appearing later at the bottom, you can use the same images.
+
 ## 2.2 Hearth explorer — `src/pages/hexplore.html`
 
 | Filename to add | Slot | Recommended size | Orientation |
@@ -70,6 +92,8 @@ most of this list today.
 | `hearth-world.jpg` | "A familiar world made strange" | 1400 × 900 | landscape |
 
 Vex, Katie, and Scarlett already have artwork. Ottie is the only character missing one.
+
+ME: Add a Jonathan card.
 
 ## 2.3 My Athletics — `src/pages/myathletics.html`
 
@@ -91,6 +115,68 @@ photography all work.
 The "Experiences" gallery is a six-tile mosaic. Tiles are **positionally
 coupled** — the CSS uses `nth-child` for both column spans and corner
 rounding, so the order below is the order they must be added in.
+
+ME: This is a list of everything I have done -- it doesn't need a full page, but cards that explain what it is.
+
+Model Congress 2023-2027
+
+I have won numerous awards in this debate format and have loved spending time with my team.
+
+Track and Field 2023-2027
+
+I have enjoyed athletics since a kid, and have happily engaged in a variety of Track and Field events at my school.
+
+Fear Symmetry 2023-2027
+
+I have worked as a Staff Editor on Fear Symmetry, our creative writing magazine, since I was a Freshman.
+
+Edenseek Publishing 2021-?
+
+My father and I's publishing company where we produce comic books and children books and publish our own works. We have done many fun things, including present our comic books and children books at New York Comic Con every year starting since Freshman year.
+
+Songwriting and Piano 2014-?
+
+I have played piano since I was a kid, and have always dabbled in songwriting. I love making music and got more into it in high school.
+
+Project Cicero 2023-2027
+
+I am a Student Co-Chair of the Project Cicero organization, working to provide teachers with books for their classrooms.
+
+School Tour Guide 2024-2027
+
+I have been a tour guide at my school since 10th grade, working to show the best parts of the school to incoming families.
+
+Tutor 2021-2025
+
+I worked as a tutor from 7th-10th grade, helping students in all subjects in middle school, and specifically math in high school.
+
+Robotics 2023-2025
+
+I was on my school's FTC and Robo Cup Jr team for Freshmen and Sophomore year, but did too many activites to continue as an upper-classmen.
+
+Rhythms for Recovery 2025-2027
+
+An organization where I play music with classmates for the elderly. An amazing way to share my music and give back to the community.
+
+Engineering Club 2024-2027
+
+I lead the Engineering Club with my close friend Jessica -- we help provide meaningful insight into the world of engineering for our peers by inviting esteemed guest speakers and hosting tinkering sessions.
+
+Improv Club 2024-2027
+
+I lead the Improv Club with my close friend Alfie -- we have fun performing and being silly, learning deeper communication and how to freely express ourselves.
+
+Church Choir 2023-?
+
+When I have time, I do Gregorian Chanting at Church with my dad.
+
+Synagogue Activities 2020-?
+
+I have been a part of B'nai Jeshurun synagogue on the Upper West Side, where I participate in various activities including helping migrant workers, leading Teen Services, and doing a "Midnight Run" to donate clothes to the unhoused.
+
+Summer
+
+I have done various courses over the summer, including Stanford's online classes, Lumiere's research program to write a philosophy essay, and  working with my dad to promote our publishing company and learn more about Artificial Intelligence.
 
 | Order | Label already in place | Filename to add | Recommended size |
 |---|---|---|---|
@@ -115,11 +201,43 @@ Athletics or Extracurriculars pattern. Otherwise no files needed.
 
 Four cards exist: Singing, Piano, Songwriting, Performances.
 
+Singing: I frequently sing and am always looking to improve my voice. I the feeling of music being generated from within you, which is why I love singing so much.
+
+Piano: I have played since a child and feel connected to the ivory keys.
+
+Songwriting: Songwriting has been my way of expressing myself and keeping myself grounded when high school and life was hard. It was a therapy turned into an intense hobby and I really love it.
+
+Performances: I love performing more than anything -- the adrenaline knocks sense into me and all of a sudden I fluorish whenever I step foot on stage.
+
 ## 2.6 My Academics — `src/pages/myacademics.html`
 
 No image slots. Six subject cards (Writing and Literature, History and
 Culture, Mathematics, Science, Computer Science, Art and Performance),
 all text-only. No files needed.
+
+Writing and Literature
+
+English is the class where I learn how to appear in the world with eloquent language both produced orally and by the hand. I search for the deeper meaning of things in that class, and more than anything love to share my ideas with peers.
+
+History and Culture
+
+I love knowledge and knowing things, and what has more things to know than the past? While figuring out the craft of history has been challenging, I truly love immersing myself in culture and familiarizing myself with the world that came before me.
+
+Mathematics
+
+There is nothing better for me than immersing myself in a difficult problem set. Before bed at night when I was very young, I always did math problems. Now, I immerse myself in school material and external material to make sure I have fully absorbed foundational concepts.
+
+Science
+
+I want to know everything about the the mind, the world, the body, and everything in between. I want to know how things work, how I can collect data, and how I can use that data. Science is my way to understand the world concretely, which is why I love immersing myself in classes.
+
+Computer Science
+
+I love creating digital platforms and games -- I believe that technology is a medium where one can essentially do magic, and computer science is necessary to make the magic happen.
+
+Art and Performance
+
+Through school I have done many artistic things including acting classes, photography, music, painting, and drawing, which I love. Bringing my ideas to life is something that truly makes me happy.
 
 ## 2.7 Essays index — `src/pages/writing/essays.html`
 
@@ -144,13 +262,29 @@ Recommended size: 400 × 400, square, consistent crop.
 
 | Piece | Status | What's needed |
 |---|---|---|
-| **Petrichor** | Page built, empty | The poem |
-| **We're Entering the Fog** | Page built, empty | The poem |
+| **Petrichor** | Page built, empty | The poem | --> CHANGE TO LASREVER
+
+This poem explores the point of no return -- the point when everything changes within oneself and without oneself and they have to make a choice to commit to what they know is right.
+
+| **We're Entering the Fog** | Page built, empty | The poem | --> CHANGE TO BOY
+
+This poem is a reflectory poem upon who I am and how I exist in the world.
+
 | **The Horizon Line at Dusk** | Page built, empty | The story |
-| **I Agree to Disagree** | Page built, empty | The research text, or an abstract + PDF |
+
+A story, either short or novel length, that explores brotherhood, friendship, and reality itself. I was inspired to write this piece from a trip to the Hamptons that made me think what it means to connect to others and how we differ as people on a deeper level.
+
+| **I Agree to Disagree: An Incomplete Analysis of the Israeli-Palestinian War** | Page built, empty | The research text, or an abstract + PDF |
+
+Having been immersed in many discussions on the topic, I wanted to find out the best way to go about discussing the issue, and realized there is no best way or right answer. Instead, there is only a need for compassion when there is intense disagreement.
+
 | **Reflection #1** | Card is an unfilled template | Date, title, description, body |
 | **Reflection #2** | Card is an unfilled template | Date, title, description, body |
+
+ GET RID OF THE JOURNALING AREA -- I DO NOT WANT TO INCLUDE PERSONAL REFLECTIONS
+
 | **Poem previews** | Two cards read *"Add a short line or two from the poem here"* to visitors | One or two lines from Petrichor and We're Entering the Fog |
+
 | **Essay collection** | Index built, no entries | One or more essays |
 | **My Music** | No real content anywhere on the page | Any songwriting, performance, or review material |
 
@@ -174,9 +308,21 @@ Small factual gaps that currently show placeholder text or are simply absent.
 - **A published-work list** — `links.txt` mentions a book on Walmart's
   catalogue (*Egypt the Cat*, ISBN 9798987288016) and pending "Athletics Site"
   and "Scholastic Stuff and other Awards" items. None of this is on the site.
+
+Egypt the Cat Series
+Egypt the Cat
+1 in Magic, Magic, Magic
+2 in Dance Mania
+3 Leaves Los Angeles
+4 in Time
+5 in the Future
+unwritten 6 in the Space Labyrinth
+
 - **The other three projects in `README.md`** — Golden Hands, Edenseek, and
   Pages are named there but appear nowhere on the site. Only Hearth does.
-
+  
+  IGNORE PAGES --> talk about Edenseek in extracurricular
+  Golden Hands is part of Hearth and not separate
 ---
 
 # 5. Already in the repository — just needs your go-ahead
@@ -196,6 +342,8 @@ Proposed placements:
 
 Applying this is five `<img>` tags and no CSS changes.
 
+DO IT
+
 ## 5.2 Unused photographs
 
 `comiccon1`–`comiccon5`, `Group Photo.jpeg`, `jonathan.jpg`, `leo.jpg`.
@@ -206,6 +354,7 @@ consent question, not a design one.
 
 `angelwings.jpg` — a strong convention photo. Blocked on D5 above.
 
+DO IT especially in Edenseek
 ---
 
 # 6. Do not publish
@@ -214,6 +363,8 @@ consent question, not a design one.
   party's photograph and full name** (a KLA engineer). Not yours to publish.
   It also has a typo in its own headline.
 - Anything in §5.2 without the consent of the people pictured.
+
+I made it and have consent, publish it.
 
 ---
 
