@@ -613,10 +613,11 @@ Three further spaces were requested and built:
   single *Leo*.
 - **My Athletics** gained a "Clubs & Organizations" section.
 
-All three are structurally complete but waiting on details: the *Venus*
-cover and description, the Spotify URL for *Leo*, and the list of
-organizations. Each carries a copy-paste template in an HTML comment
-marking exactly where the missing value goes.
+All three are structurally complete. The *Venus* description has since
+been supplied and is in. Still waiting on the *Venus* cover art, the
+Spotify URL for *Leo*, and the list of organizations. Each carries a
+copy-paste template in an HTML comment marking exactly where the missing
+value goes.
 
 Committed separately.
 
