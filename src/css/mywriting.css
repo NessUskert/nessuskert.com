@@ -566,6 +566,73 @@
 
 
 /* =========================================================
+   BOOK CARDS
+   One card per title in a series. Text only — picture-book
+   covers are wider than they are tall and do not sit well in
+   the image cards used elsewhere on the writing pages.
+   ========================================================= */
+
+.book-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 13rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid var(--writing-border);
+  border-radius: var(--writing-radius-medium);
+  background-color: var(--writing-surface);
+  box-shadow: var(--writing-shadow-small);
+  transition:
+    transform var(--writing-transition),
+    box-shadow var(--writing-transition);
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--writing-shadow-medium);
+}
+
+.book-card--unwritten {
+  border-style: dashed;
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+.book-card__number {
+  margin: 0 0 0.75rem;
+  color: var(--writing-green-700);
+  font-family: Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.book-card__title {
+  margin: 0;
+  color: var(--writing-green-900);
+  font-family: var(--writing-heading-font);
+  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.book-card__status {
+  margin: auto 0 0;
+  padding-top: 1.5rem;
+  color: var(--writing-text-light);
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+
+/* =========================================================
    PLACEHOLDER CARDS
    ========================================================= */
 
@@ -794,7 +861,8 @@
     grid-template-columns: 1fr;
   }
 
-  .poetry-card-grid {
+  .poetry-card-grid,
+  .book-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -849,7 +917,8 @@
   }
 
   .writing-card-grid,
-  .poetry-card-grid {
+  .poetry-card-grid,
+  .book-card-grid {
     grid-template-columns: 1fr;
   }
 
@@ -897,7 +966,8 @@
 
   .writing-category-card__content,
   .writing-card__content,
-  .poetry-card {
+  .poetry-card,
+  .book-card {
     padding: 1.25rem;
   }
 
